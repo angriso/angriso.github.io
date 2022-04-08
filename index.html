@@ -7,10 +7,12 @@
     <title>Document</title>
 </head>
 <body>
+    hello world
     <div id="xx"></div>
 </body>
 <script>
     let ref = document.referrer;
-    document.getElementById('xx').innerText = ref;
+    console.log(ref);
+    document.getElementById('xx').innerText = ''+ref;
 </script>
 </html>
