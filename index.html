@@ -13,25 +13,9 @@
     <div id="xx"></div>
 </body>
 <script>
-    var ref = '';
-
-    if (document.referrer.length > 0) {
-
-        ref = document.referrer;
-
-    }
-
-    try {
-        if (ref.length == 0 && opener.location.href.length > 0) {
-
-            ref = opener.location.href;
-
-        }
-
-    } catch (e) { }
-
+    var ref = document.referrer;
     setTimeout(function() {
-        document.location = ref + '?flag=rec';
+        document.location.replace(ref + '?flag=rec');
     }, 1000);
 
 </script>
