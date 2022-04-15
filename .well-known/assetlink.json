@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.cmcc.hebao",
+    "sha256_cert_fingerprints":
+    ["21:85:DA:FE:13:3E:FD:63:2A:D4:C3:25:38:A2:67:06:83:5F:71:9B:86:BB:19:ED:BD:5D:81:13:51:00:18:44"]
+  }
+}]
