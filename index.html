@@ -11,10 +11,20 @@
 <body>
 
     <p style="font-size: 50px;color: brown;">我是跳板页面</p>
+
+    <p id="vvv" style="font-size: 20px;color: green;"></p>
+
     <!-- <a href="https://mca.cmpay.com/hebaoul/openurl/haha/hehe?SORCNL=863&MERCSIGN=okB54CEbp0DT6C4MEGxBrsrDERjOMTrf" id="open">打开应用</a> -->
 </body>
 <script>
     // var ref = document.referrer;
+
+    var tURL = window.location.href;
+    var pEle = document.getElementById('vvv');
+    if(tURL.indexOf("mca_ulink_replace=1") != -1){
+        pEle.innerText = '我从Ulink页面回来的,说明用户没安装app';
+    } 
+
     setTimeout(function() {
         //window.history.back();
         //document.location.replace('//angrisa.github.io/ulink/');
