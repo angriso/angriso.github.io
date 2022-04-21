@@ -19,25 +19,36 @@
 <script>
     // var ref = document.referrer;
 
-    var tURL = window.location.href;
-    var pEle = document.getElementById('vvv');
-    if(tURL.indexOf("mca_ulink_replace=1") != -1){
-        pEle.innerText = '我从Ulink页面回来的,说明用户没安装app';
-    } 
+     // 获取url中指定参数
+     var getParamss = function(name) {
+            var results = new RegExp('[\\?&]' + name + '=([^&#]*)').exec(window.location.href);
+            if (!results) {
+                return '';
+            }
+            return results[1] || '';
+     };
+
 
     setTimeout(function() {
         //window.history.back();
         //document.location.replace('//angrisa.github.io/ulink/');
         // document.location.replace('//mca.cmpay.com/hebaoul/openurl/haha/hehe?SORCNL=863&MERCSIGN=okB54CEbp0DT6C4MEGxBrsrDERjOMTrf');
+ 
 
-        var tURL = window.location.href;
-        if(tURL.indexOf("mca_ulink_replace=1") != -1){
+        var flg = getParamss('ulink_back_flg');
+        if(flg){ //从
+            var pEle = document.getElementById('vvv');
+            pEle.innerText = '我从Ulink页面回来的,说明用户没安装app';
             document.location.replace('https://itunes.apple.com/cn/app/id597795676?mt=8');
         }else{
-            document.location.replace('//angrisa.github.io/ulink/');
+            document.location.replace('//angrisa.github.io/ulink/index.html?' + 'ulink_ref='+ encodeURIComponent(window.location.href));
         }
+
+        
+          
     }, 500);
 
+   
 
 
     //document.location = 'https://mca.cmpay.com/hebaoul/openurl/haha/hehe?SORCNL=863&MERCSIGN=okB54CEbp0DT6C4MEGxBrsrDERjOMTrf';
