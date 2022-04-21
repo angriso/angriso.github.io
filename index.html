@@ -38,7 +38,7 @@
         var flg = getParamss('ulink_back_flg');
         if(flg){ //从
             var pEle = document.getElementById('vvv');
-            pEle.innerText = '我从Ulink页面回来的,说明用户没安装app';
+            pEle.innerText = '我从Ulink页面回来的,说明用户没安装app喔' + window.location.href;
             document.location.replace('https://itunes.apple.com/cn/app/id597795676?mt=8');
         }else{
             var pEle = document.getElementById('vvv');
@@ -48,7 +48,7 @@
 
         
           
-    }, 500);
+    }, 0);
 
    
 
