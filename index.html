@@ -17,9 +17,18 @@
     // var ref = document.referrer;
     setTimeout(function() {
         //window.history.back();
-        document.location.replace('//angrisa.github.io/ulink/');
+        //document.location.replace('//angrisa.github.io/ulink/');
         // document.location.replace('//mca.cmpay.com/hebaoul/openurl/haha/hehe?SORCNL=863&MERCSIGN=okB54CEbp0DT6C4MEGxBrsrDERjOMTrf');
+
+        var tURL = window.location.href;
+        if(tURL.indexOf("mca_ulink_replace=1") != -1){
+            document.location.replace('https://itunes.apple.com/cn/app/id597795676?mt=8');
+        }else{
+            document.location.replace('//angrisa.github.io/ulink/');
+        }
     }, 500);
+
+
 
     //document.location = 'https://mca.cmpay.com/hebaoul/openurl/haha/hehe?SORCNL=863&MERCSIGN=okB54CEbp0DT6C4MEGxBrsrDERjOMTrf';
 
