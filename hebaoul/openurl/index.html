@@ -76,7 +76,10 @@
 			return results[1] || '';
 		};
 		(function(){ //拉端失败/没装 会跳到该页面，后跳回跳板链ulink_ref（链接）
-			window.location.replace(decodeURIComponent(getParamss('ulink_ref')) +'&ulink_back_Flg=1');
+			var ulink_ref = getParamss('ulink_ref');
+			if (ulink_ref) {
+				window.location.replace(decodeURIComponent(ulink_ref) +'&ulink_back_Flg=1');
+			}
 		}())
 	</script>
 </html>
