@@ -10,7 +10,7 @@
 
 <body>
 
-    <p style="font-size: 50px;color: brown;">我是跳板页面</p>
+    <p style="font-size: 50px;color: brown;">我是跳板页面带参数</p>
 
     <p id="vvv" style="font-size: 20px;color: green;"></p>
 
@@ -41,6 +41,8 @@
             pEle.innerText = '我从Ulink页面回来的,说明用户没安装app';
             document.location.replace('https://itunes.apple.com/cn/app/id597795676?mt=8');
         }else{
+            var pEle = document.getElementById('vvv');
+            pEle.innerText = window.location.href;
             document.location.replace('//angrisa.github.io/ulink/index.html?' + 'ulink_ref='+ encodeURIComponent(window.location.href));
         }
 
