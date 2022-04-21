@@ -2,6 +2,10 @@
     "applinks": {
         "apps": [],
         "details": [
+	    {
+                "appID": "FUV5KWMMAV.com.cmpay.CMPayClient",
+                "paths": [ "/hebaoul/*", "/qq_conn/1106369906/*"]
+            },
             {
                 "appID": "FUV5KWMMAV.com.w2fzu.rabbit3333",
                 "paths": [ "/ulink/*"]

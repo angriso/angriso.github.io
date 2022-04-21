@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="always" name="referrer">
+		<meta http-equiv="Content-type" content="text/html; charset=GBK">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>前往应用市场</title>
+		<script src="https://p.10086.cn/info/version3/common/scripts/fixScreen/fixScreen.js"></script>
+		<style>
+			body{
+				padding: 0;
+				margin: 0;
+			}
+			ul{
+				margin-top: 1rem;
+				padding: 0;
+			}
+			li{
+				margin: .4rem .5rem;
+				background: -webkit-gradient(linear,left top, right top,color-stop(8%, #f3f3f6),color-stop(18%, #f8faff),color-stop(33%, #f3f3f6));
+				background: -o-linear-gradient(left,#f3f3f6 8%,#f8faff 18%,#f3f3f6 33%);
+				background: linear-gradient(90deg,#f3f3f6 8%,#f8faff 18%,#f3f3f6 33%);;
+				height: 0.4rem;
+				list-style: none;
+				background-size: 400% 100%;
+				background-position: 100% 50%;
+				-webkit-animation: skeleton-loading .6s ease infinite;
+				        animation: skeleton-loading .6s ease infinite;
+			}
+			
+			@-webkit-keyframes skeleton-loading {
+				0% {
+					background-position: 100% 50%;
+				}
+				100% {
+					background-position: 0 50%;
+				}
+			}
+			
+			@keyframes skeleton-loading {
+				0% {
+					background-position: 100% 50%;
+				}
+				100% {
+					background-position: 0 50%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class='screen-root'>
+			<ul>
+			  <li style="width: 30%;"></li>
+			  <li style="width: 60%;"></li>
+			  <li style="width: 50%;"></li>
+			  <li style="width: 80%;"></li>
+			  <li style="width: 70%;"></li>
+			  <li style="width: 60%;"></li>
+			  <li style="width: 50%;"></li>
+			  <li style="width: 30%;"></li>
+			  <li style="width: 30%;"></li>
+			  <li style="width: 88%;"></li>
+			  <li style="width: 70%;"></li>
+			  <li style="width: 80%;"></li>
+			  <li style="width: 60%;"></li>
+			  <li style="width: 30%;"></li>
+			</ul>
+		</div>
+	</body>
+	<script>
+		var getParamss = function(name) {
+			var results = new RegExp('[\\?&]' + name + '=([^&#]*)').exec(window.location.href);
+			if (!results) {
+				return '';
+			}
+			return results[1] || '';
+		};
+		(function(){ //拉端失败/没装 会跳到该页面，后跳回跳板链ulink_ref（链接）
+			window.location.replace(decodeURIComponent(getParamss('ulink_ref')) +'&ulink_back_Flg=1');
+		}())
+	</script>
+</html>
