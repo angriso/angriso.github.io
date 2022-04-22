@@ -7,6 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+    
+    <script type="text/javascript">
+    var today = new Date,
+        year = today.getFullYear(),
+        month = today.getMonth() + 1,
+        day = today.getDate(),
+        ymd = year + "" + month + day,
+        oHead = document.getElementsByTagName("HEAD").item(0),
+        oScript = document.createElement("script"),
+        bsdfp = null;
+    oScript.async = !0,
+    oScript.type = "text/javascript",
+    oScript.src = "https://dfp.cmft.com.cn:9080/dfp/public/downloads/frms-fingerprint.js?custID=dfp&serviceUrl=https://dfp.cmft.com.cn/dfp/public/generate/jsonp&channel=WEB&autoExec=false&ymd=" + ymd,
+    oHead.appendChild(oScript),
+    oScript.onload = function() {
+        (bsdfp = new BSDeviceFingerprint).getFingerprint({
+            extendFields: []
+        }, function(t) {
+            window.localStorage.JK_dfpInfo = JSON.parse(t).dfp
+        })
+    }
+    </script>
 
 <body>
 
