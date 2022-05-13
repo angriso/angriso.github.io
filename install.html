@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>IOS版下载安装</title>
+    </head>
+    <body>
+        <h1>点击蓝色字体进行安装<a id="down_btn"  href="itms-services://?action=download-manifest&url=https://angriso.github.io/Info.plist">灰度版</a></h1>
+        <h1>温馨提示：点击后将出现提示安装内测版的弹窗提示。由于网络原因，弹窗可能不能及时弹出，请耐心等待，无需多次点击。感谢您体验内测版本，我们期待收到您的宝贵意见和建议。</h1>
+        <br/>
+    </body>
+
+    <script>
+        let url = window.location.host;
+        var href = "itms-services://?action=download-manifest&url=" + url + '/Info.plist'
+        document.querySelector("#down_btn").href = href;
+    </script>
+</html>
