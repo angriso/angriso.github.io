@@ -7,14 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
+<script src="https://some.url.cannot.find.js" async></script>
 <body>
 
-    <p style="font-size: 50px;color: brown;">我是跳板页面带参数</p>
+    <p style="font-size: 50px;color: brown;">我是跳板页面带参数-延时跳转500ms</p>
 
     <p id="vvv" style="font-size: 20px;color: green;"></p>
 
-    <!-- <a href="https://mca.cmpay.com/hebaoul/openurl/haha/hehe?SORCNL=863&MERCSIGN=okB54CEbp0DT6C4MEGxBrsrDERjOMTrf" id="open">打开应用</a> -->
+    <a href="https://mca.cmpay.com/hebaoul/openurl/i/n/index.html?SORCNL=863&MERCSIGN=okB54CEbp0DT6C4MEGxBrsrDERjOMTrf" id="open">点击打开应用</a>
+    
+    <a href="https://itunes.apple.com/cn/app/id597795676?mt=8" id="open1">appstore</a>
+
 </body>
 <script>
     // var ref = document.referrer;
@@ -27,7 +30,6 @@
             }
             return results[1] || '';
      };
-
 
     setTimeout(function() {
         //window.history.back();
@@ -45,15 +47,9 @@
             //document.location.replace('//angrisa.github.io/ulink/index.html?' + 'ulink_ref='+ encodeURIComponent(window.location.href));
 
             document.location.replace('//mca.cmpay.com/hebaoul/openurl/i/n/index.html?SORCNL=1747&MERCSIGN=iQW7SssoVr6znoE4Iyx7EvpaFIoW9d9r' + '&ulink_ref='+ encodeURIComponent(window.location.href));
-        }
-
-        
-          
-    }, 0);
-
-   
-
-
+        }         
+    }, 500);
+    
     //document.location = 'https://mca.cmpay.com/hebaoul/openurl/haha/hehe?SORCNL=863&MERCSIGN=okB54CEbp0DT6C4MEGxBrsrDERjOMTrf';
 
 </script>
