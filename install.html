@@ -8,9 +8,10 @@
         <div class='top_bg'></div>
         <div class="top_tx">
             <h1>点击进行安装</h1>
-            <h1>温馨提示：本工具需配合🐓一起食用</h1>
-            <a href="https://localhost:6888/install.ipa">点击访问ipa</a>
-            <p style="height: 100px;">
+            <h1>温馨提示：需配合「浪哩格浪～」一起食用</h1>
+            <a href="https://localhost:6888/install.ipa">访问应用文件</a>
+            <!-- <p style="height: 100px;"> -->
+            <img style="width: 350px;height: 350px; margin-top: 30px;" src="https://api.qrserver.com/v1/create-qr-code?data=https:/angriso.github.io/install.html">
             <h3 class="install-tx" style="visibility: hidden;">正在安装...</h3>
             <h3 class="install-tx" style="visibility: hidden;">正在安装，请按 Home 键在桌面查看</h3>
         </div>
@@ -35,6 +36,9 @@
         };
     </script>
     <style>
+         body{
+            font-size: 20px;
+        }
         .top_bg{
             /* height: 40px; */
             /* width: 100%; */
@@ -44,9 +48,10 @@
             height: 100px;
         }
         .top_tx{
+            height: 1000px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-around;
             align-items:  center;
         }
         .clickBtn a{
@@ -55,15 +60,16 @@
         }
         .clickBtn{
             text-align: center;
-            width: 40%;
-            height: 60px;
+            width: 50%;
+            height: 100px;
             margin-left: auto;
             margin-right: auto;
             background-color: #1abc9c;
-            border-radius: 40px;
+            border-radius: 50px;
         }
         .clickBtn p{
-            line-height: 60px;
+            line-height: 100px;
+            font-size: 30px;
         }
     </style>
 </html>
