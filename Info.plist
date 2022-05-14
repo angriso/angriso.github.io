@@ -17,13 +17,13 @@
                         <key>kind</key>
                         <string>display-image</string>
                         <key>url</key>
-                        <string>https://mca.cmpay.com/ccaweb/jsp/mca/appRecomLstMng/images/20210826112556.png</string>
+                        <string>https://img1.baidu.com/it/u=1251767339,1965771797&fm=253&fmt=auto&app=138&f=PNG?w=500&h=500</string>
                     </dict>
                 </array>
                 <key>metadata</key>
                 <dict>
                     <key>bundle-identifier</key>
-                    <string>com.cyberwise.CMPayClient</string>
+                    <string>com.jeby.lspxgb</string>
                     <key>bundle-version</key>
                     <string>1.0</string>
                     <key>kind</key>
