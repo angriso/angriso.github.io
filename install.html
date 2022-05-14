@@ -5,25 +5,51 @@
         <title>ipa下载安装</title>
     </head>
     <body>
-        <img class='top_bg' src="./top_bg_mobile.png">
-        <h1>点击进行安装  </h1>
-        <div class="clickBtn">
-            <a id="down_btn"  href="itms-services://?action=download-manifest&url=https://angriso.github.io/Info.plist"><p>立即安装</p></a>
+        <div class='top_bg'></div>
+        <div class="top_tx">
+            <h1>点击进行安装</h1>
+            <h1>温馨提示：本工具需配合🐓一起食用</h1>
+            <a href="https://localhost:6888/install.ipa">点击访问ipa</a>
+            <p style="height: 100px;">
+            <h3 class="install-tx" style="visibility: hidden;">正在安装...</h3>
+            <h3 class="install-tx" style="visibility: hidden;">正在安装，请按 Home 键在桌面查看</h3>
         </div>
-        <h1>温馨提示：本工具需配合🐓一起食用 <a href="https://localhost:6888/install.ipa">点击访问ipa</a></h1>
+        </p>
+        <div>
+            <div class="clickBtn">
+                <a id="down_btn" ><p>立即安装</p></a>
+            </div>
+        </div>
         <br/>
     </body>
 
     <script>
-        // let url = window.location.host;
-        // var href = "itms-services://?action=download-manifest&url=" + url + '/Info.plist'
-        // document.querySelector("#down_btn").href = href;
+        document.querySelector("#down_btn").onclick = function (){
+            setTimeout(() => {
+                let eles = document.getElementsByClassName("install-tx");
+                for (let t of eles) {
+                    t.style.visibility = 'visible'; 
+                }
+            }, 2000);
+            window.location.href="itms-services://?action=download-manifest&url=https://angriso.github.io/Info.plist";
+        };
     </script>
     <style>
         .top_bg{
-            height: 40px;
+            /* height: 40px; */
+            /* width: 100%; */
+            /* background-repeat: repeat-x; */
+            background: url(./top_bg_mobile.png) top center no-repeat;
+            background-size: 100% auto;
+            height: 100px;
         }
-        a{
+        .top_tx{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items:  center;
+        }
+        .clickBtn a{
             color: white;
             text-decoration: none;
         }
@@ -31,7 +57,9 @@
             text-align: center;
             width: 40%;
             height: 60px;
-            background-color: cadetblue;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #1abc9c;
             border-radius: 40px;
         }
         .clickBtn p{
