@@ -11,7 +11,7 @@
                         <key>kind</key>
                         <string>software-package</string>
                         <key>url</key>
-                        <string>http://192.168.0.104:6888/install.ipa</string>
+                        <string>http://localhost:6888/install.ipa</string>
                     </dict>
                     <dict>
                         <key>kind</key>
