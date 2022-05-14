@@ -5,8 +5,12 @@
         <title>ipa下载安装</title>
     </head>
     <body>
-        <h1>点击蓝色字体进行安装 <a id="down_btn"  href="itms-services://?action=download-manifest&url=https://angriso.github.io/Info.plist">手机应用</a></h1>
-        <h1>温馨提示：本工具需配合🐓一起食用</h1>
+        <img class='top_bg' src="./top_bg_mobile.png">
+        <h1>点击进行安装  </h1>
+        <div class="clickBtn">
+            <a id="down_btn"  href="itms-services://?action=download-manifest&url=https://angriso.github.io/Info.plist"><p>立即安装</p></a>
+        </div>
+        <h1>温馨提示：本工具需配合🐓一起食用 <a href="https://localhost:6888/install.ipa">点击访问ipa</a></h1>
         <br/>
     </body>
 
@@ -15,4 +19,23 @@
         // var href = "itms-services://?action=download-manifest&url=" + url + '/Info.plist'
         // document.querySelector("#down_btn").href = href;
     </script>
+    <style>
+        .top_bg{
+            height: 40px;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        .clickBtn{
+            text-align: center;
+            width: 40%;
+            height: 60px;
+            background-color: cadetblue;
+            border-radius: 40px;
+        }
+        .clickBtn p{
+            line-height: 60px;
+        }
+    </style>
 </html>
