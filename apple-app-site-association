@@ -11,5 +11,8 @@
                 "paths": [ "/ulink/*"]
             } 
         ]
+    },
+    "appclips": {
+        "apps": ["FUV5KWMMAV.com.cmpay.CMPayClient.Clip"]
     }
 }
