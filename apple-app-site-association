@@ -4,12 +4,8 @@
         "details": [
 	    {
                 "appID": "FUV5KWMMAV.com.cmpay.CMPayClient",
-                "paths": [ "/hebaoul/*", "/qq_conn/1106369906/*"]
-            },
-            {
-                "appID": "FUV5KWMMAV.com.w2fzu.rabbit3333",
-                "paths": [ "/ulink/*"]
-            } 
+                "paths": [ "/hebaoul/*", "/qq_conn/1106369906/*", "/i/*", "/waph5/single/callHebao/*", "/info/wap/sjqb/cpb/jsym/index.html/*"]
+            }
         ]
     },
     "appclips": {
