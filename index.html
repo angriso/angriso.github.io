@@ -24,6 +24,33 @@
 
     <a onclick="jumpmmm()">open</a>
 
+     <p id="demo">获得您的坐标：</p>
+
+    <p> <a onclick="getLocation()">获取位置</a></p>
+
+    <script>
+        var x = document.getElementById('demo');
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                x.innerHTML = '当前浏览器不支持地理定位';
+
+            }
+        }
+        // 获取定位成功，显示位置信息 
+        function showPosition(position) {
+            x.innerHTML = 'Latitude(纬度): ' + position.coords.latitude + // 纬度 
+                '<br>Longitude(经度): ' + position.coords.longitude; // 经度
+        }
+        // 获取定位失败，显示错误信息
+        function showError(error) {
+            switch (error.code) {
+                case error.PERMISSION_DENIED: x.innerHTML = '用户拒绝地理定位请求'; break;
+            }
+        }
+
+    </script>
 </body>
 <script>
     // var ref = document.referrer;
