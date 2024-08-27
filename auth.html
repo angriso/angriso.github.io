@@ -33,8 +33,9 @@
         <button onclick="myFunction()">点我授权</button>
     </p>
 </body>
-
-
+	
+  <script type="text/javascript" src="/hybrid_html_uni.webview.1.5.5.js"></script>
+	
 <script>
   function myFunction(){
 
@@ -46,7 +47,7 @@
 	}
 
     //if (uni !== undefined) {
-        window.postMessage({
+        webUni.postMessage({
             data: {
 		action: "message",
                 result: r
