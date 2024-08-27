@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>首页</title>
+</head>
+
+
+<body>
+     
+    <p class="bb">
+        <button onclick="myFunction()">点我授权</button>
+    </p>
+
+</body>
+
+
+<script>
+  function myFunction(){
+
+	var r=confirm("确认授权？");
+	if (r==true){
+		
+	} else{
+		
+	}
+
+    if (uni !== undefined) {
+        uni.postMessage({
+            data: {
+                result: r
+            }
+        });
+    }
+    
+}
+</script>
+
+<style>
+    .bb{
+        display: flex;
+        justify-content: center;
+    }
+    button{
+        font-size: 50px;
+        text-align: center;
+    }
+</style>
+
+</html>
