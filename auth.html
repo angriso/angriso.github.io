@@ -45,13 +45,14 @@
 		
 	}
 
-    if (uni !== undefined) {
-        uni.postMessage({
+    //if (uni !== undefined) {
+        window.postMessage({
             data: {
+		action: "message",
                 result: r
             }
         });
-    }
+    //}
     
 }
 </script>
